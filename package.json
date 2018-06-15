@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "package": "cat dist/ol-zoom-level/runtime.js dist/ol-zoom-level/polyfills.js dist/ol-zoom-level/scripts.js dist/ol-zoom-level/main.js > dist/build.js"
   },
   "private": true,
   "dependencies": {
@@ -15,6 +16,7 @@
     "@angular/common": "^6.0.3",
     "@angular/compiler": "^6.0.3",
     "@angular/core": "^6.0.3",
+    "@angular/elements": "^6.0.5",
     "@angular/forms": "^6.0.3",
     "@angular/http": "^6.0.3",
     "@angular/platform-browser": "^6.0.3",
@@ -22,7 +24,8 @@
     "@angular/router": "^6.0.3",
     "core-js": "^2.5.4",
     "rxjs": "^6.0.0",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.8.26",
+    "document-register-element": "^1.7.2"
   },
   "devDependencies": {
     "@angular/compiler-cli": "^6.0.3",
