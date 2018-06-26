@@ -20,7 +20,7 @@ To use ol-zoom-level, first you need to load OpenLayers javascript library along
 ```
 The, load the ol-zoom-level library from `node_modules`
 
-`<script src="./node_modules/ol-zoom-level/dist/build.js"></script>`
+`<script src="./node_modules/ol-zoom-level/build.js"></script>`
 
 Finally, in your existing OpenLayers application, add ol-zoom-level HTML element and pass the OpenLayers map object as a property. Here's a simple example:
 
