@@ -1,27 +1,37 @@
-# OlZoomLevel
+# ol-zoom-level
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+OpenLayers zoom level library. Adds a zoom level view on an OpenLayers map that displays the current zoom level.
 
-## Development server
+![Preview](preview.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Installation
 
-## Code scaffolding
+You can install ol-zoom-level using npm:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+`npm install ol-zoom-level --save`
 
-## Build
+## Usage
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+To use ol-zoom-level, first you need to load OpenLayers javascript library along with its corresponsing CSS.
 
-## Running unit tests
+```
+  <script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
+  <link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
+```
+The, load the ol-zoom-level library from `node_modules`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+`<script src="./node_modules/ol-zoom-level/dist/build.js"></script>`
 
-## Running end-to-end tests
+Finally, in your existing OpenLayers application, add ol-zoom-level HTML element and pass the OpenLayers map object as a property. Here's a simple example:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
+const zoomLevel = document.createElement('ol-zoom-level');
 
-## Further help
+// map is the OpenLayers map object
+zoomLevel.map = map;
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+document.body.appendChild(zoomLevel);
+```
+
+> Please note that if you are creating the zoom level control synchronously with the creation of the map, you may need to introduce a timeout so that the map has enough time to instantiate.
+
