@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>OlZoomLevel</title>
+  <title>OpenLayers zoom level example</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,19 +12,14 @@
 </head>
 <body>
     <div id="map" class="map" tabindex="0"></div>
-  <script>
-      var map = new ol.Map({
+    <script>
+      const map = new ol.Map({
         layers: [
           new ol.layer.Tile({
             source: new ol.source.OSM()
           })
         ],
         target: 'map',
-        controls: ol.control.defaults({
-          attributionOptions: {
-            collapsible: false
-          }
-        }),
         view: new ol.View({
           center: [0, 0],
           zoom: 2

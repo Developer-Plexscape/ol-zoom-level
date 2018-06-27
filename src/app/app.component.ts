@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, Input, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -20,24 +20,29 @@ import { ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
     }
   `]
 })
-export class AppComponent implements OnInit {
-  zoomLevel: number;
-
+export class AppComponent implements OnDestroy, OnInit {
   @Input() map: ol.Map;
+  zoomLevel: number;
 
   constructor(private ref: ChangeDetectorRef) {
     const zoomOutEl: HTMLDivElement = document.querySelector('.ol-zoom-out');
     zoomOutEl.style.marginTop = '30px';
   }
 
+  ngOnDestroy() {
+    this.map.un('moveend', this.moveEndComplete);
+  }
+
   ngOnInit() {
     this.setZoom(this.map.getView().getZoom());
 
-    this.map.on('moveend', () => {
-      const zoom = this.map.getView().getZoom();
+    this.map.on('moveend', this.moveEndComplete);
+  }
 
-      if (this.zoomLevel !== zoom) { this.setZoom(zoom); }
-    });
+  private moveEndComplete = () => {
+    const zoom = this.map.getView().getZoom();
+
+    if (this.zoomLevel !== zoom) { this.setZoom(zoom); }
   }
 
   private setZoom(zoom: number) {
