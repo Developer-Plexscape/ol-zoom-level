@@ -4,6 +4,10 @@ OpenLayers zoom level library. Adds a zoom level view on an OpenLayers map that 
 
 ![Preview](preview.png)
 
+## Demo
+
+You can test a fully functional working live demo [here](https://codepen.io/bampakoa/full/gKBKMB/).
+
 ## Installation
 
 You can install ol-zoom-level using npm:
@@ -18,7 +22,7 @@ To use ol-zoom-level, first you need to load OpenLayers javascript library along
   <script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
   <link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
 ```
-The, load the ol-zoom-level library from `node_modules`
+Then, load the ol-zoom-level library from `node_modules`
 
 `<script src="./node_modules/ol-zoom-level/build.js"></script>`
 
