@@ -22,7 +22,9 @@ import { ChangeDetectorRef, Component, Input, OnDestroy, OnInit } from '@angular
 })
 export class AppComponent implements OnDestroy, OnInit {
   @Input() map: ol.Map;
-  zoomLevel: number;
+  zoomLevel: string;
+
+  private currentZoom: number;
 
   constructor(private ref: ChangeDetectorRef) {
     const zoomOutEl: HTMLDivElement = document.querySelector('.ol-zoom-out');
@@ -42,11 +44,12 @@ export class AppComponent implements OnDestroy, OnInit {
   private moveEndComplete = () => {
     const zoom = this.map.getView().getZoom();
 
-    if (this.zoomLevel !== zoom) { this.setZoom(zoom); }
+    if (this.currentZoom !== zoom) { this.setZoom(zoom); }
   }
 
   private setZoom(zoom: number) {
-    this.zoomLevel = zoom;
+    this.currentZoom = zoom;
+    this.zoomLevel = zoom.toFixed(0);
     this.ref.detectChanges();
   }
 }
