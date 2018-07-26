@@ -1,0 +1,20 @@
+{
+  "name": "ol-zoom-level",
+  "version": "1.0.2",
+  "description": "Zoom level view for OpenLayers",
+  "main": "build.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Developer-Plexscape/ol-zoom-level.git"
+  },
+  "keywords": [
+    "openlayers",
+    "zoom"
+  ],
+  "author": "Plexscape",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Developer-Plexscape/ol-zoom-level/issues"
+  },
+  "homepage": "https://github.com/Developer-Plexscape/ol-zoom-level#readme"
+}
