@@ -1,8 +1,7 @@
 {
   "name": "ol-zoom-level",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Zoom level view for OpenLayers",
-  "main": "build.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Developer-Plexscape/ol-zoom-level.git"
