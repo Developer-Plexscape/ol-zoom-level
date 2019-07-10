@@ -1,10 +1,14 @@
 # Welcome to ol-zoom-level 👋
-![Version](https://img.shields.io/badge/version-1.0.5-blue.svg?cacheSeconds=2592000)
+![Version](https://img.shields.io/badge/version-1.0.6-blue.svg?cacheSeconds=2592000)
 [![Twitter: plexearth](https://img.shields.io/twitter/follow/plexearth.svg?style=social)](https://twitter.com/plexearth)
 
 > OpenLayers zoom level library. Adds a zoom level view on an OpenLayers map that displays the current zoom level.
 
 ![Preview](preview.png)
+
+## Demo
+
+You can test a fully functional working live demo [here](https://codepen.io/bampakoa/full/gKBKMB/).
 
 ## Install
 
@@ -21,11 +25,11 @@ To use ol-zoom-level, first you need to load OpenLayers javascript library along
 <link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
 ```
 
-Then, load the respective version of ol-zoom-level library (either ES5 or ES2015)
+Then, load the ol-zoom-level library from `node_modules`
 
 ```sh
-<script src="./node_modules/ol-zoom-level/build-es5.js"></script>
-<script src="./node_modules/ol-zoom-level/build-es2015.js"></script>
+<script src="./node_modules/ol-zoom-level/build-es5.js" nomodule></script>
+<script src="./node_modules/ol-zoom-level/build-es2015.js" type="module"></script>
 ```
 
 Finally, in your existing OpenLayers application, add ol-zoom-level HTML element and pass the OpenLayers map object as a property.
