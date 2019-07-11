@@ -48,8 +48,12 @@ Please note that if you are creating the zoom level control synchronously with t
 ## Run tests
 
 ```sh
-npm test
+ng test
 ```
+
+## Known Limitations
+
+Please check browser compatibility for custom elements as described in Angular official documentation [here](https://angular.io/guide/elements#browser-support-for-custom-elements).
 
 ## Author
 
@@ -58,6 +62,8 @@ npm test
 * Twitter: [@plexearth](https://twitter.com/plexearth)
 * Github: [@Developer-Plexscape](https://github.com/Developer-Plexscape)
 
-## Known Limitations
+## 🤝 Contributing
 
-Please check browser compatibility for custom elements as described in Angular official documentation [here](https://angular.io/guide/elements#browser-support-for-custom-elements)
+Contributions, issues and feature requests are welcome!
+
+Feel free to check [issues page](https://github.com/Developer-Plexscape/ol-zoom-level/issues).
