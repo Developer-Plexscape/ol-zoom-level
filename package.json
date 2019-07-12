@@ -7,8 +7,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "package": "cat dist/ol-zoom-level/runtime.js dist/ol-zoom-level/polyfills.js dist/ol-zoom-level/scripts.js dist/ol-zoom-level/main.js > dist/build.js"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
