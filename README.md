@@ -8,7 +8,7 @@
 
 ## Demo
 
-You can test a fully functional working live demo [here](https://codepen.io/bampakoa/full/gKBKMB/).
+You can test a fully functional working live demo [here](https://plexstaticweb.z6.web.core.windows.net/ol-zoom-level).
 
 ## Install
 
