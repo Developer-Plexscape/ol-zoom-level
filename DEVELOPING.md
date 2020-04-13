@@ -16,3 +16,17 @@ Run `npm start` to start the application. You will then be able to access it at 
 To build the application, you will need a Linux environment. In case you are in a Windows 10 machine you can install [Ubuntu Bash](https://msdn.microsoft.com/en-us/commandline/wsl/install-win10) alternatively.
 
 If that is the case consider installing the Node using a [package manager](https://nodejs.org/en/download/package-manager/).
+
+## Run tests
+
+```sh
+ng test
+```
+
+To test the application in a Linux environment, follow the steps below:
+
+1. Download Google Chrome using the `wget` command: `wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb`
+2. Install Google Chrome using the `dpkg` command: `sudo dpkg -i google-chrome-stable_current_amd64.deb`
+3. Run `ng test` and ignore any errors or warnings displayed in the console window.
+4. The last line in the console window should read `No captured browser, open http://localhost:9876/`. Clicking on the link will open Karma test runner in your local Windows machine.
+5. Click on the **DEBUG** button of the page to start running the tests.

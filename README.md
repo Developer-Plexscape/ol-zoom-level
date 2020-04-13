@@ -1,5 +1,5 @@
 # Welcome to ol-zoom-level 👋
-![Version](https://img.shields.io/badge/version-1.0.6-blue.svg?cacheSeconds=2592000)
+![Version](https://img.shields.io/badge/version-1.0.7-blue.svg?cacheSeconds=2592000)
 [![Twitter: plexearth](https://img.shields.io/twitter/follow/plexearth.svg?style=social)](https://twitter.com/plexearth)
 
 > OpenLayers zoom level library. Adds a zoom level view on an OpenLayers map that displays the current zoom level.
@@ -44,12 +44,6 @@ document.body.appendChild(zoomLevel);
 ```
 
 Please note that if you are creating the zoom level control synchronously with the creation of the map, you may need to introduce a timeout so that the map has enough time to instantiate.
-
-## Run tests
-
-```sh
-ng test
-```
 
 ## Known Limitations
 

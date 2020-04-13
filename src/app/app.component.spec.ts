@@ -13,9 +13,13 @@ describe('AppComponent', () => {
     },
     on() {},
     un() {}
-   };
+  };
 
-  createZoomOut();
+  beforeAll(() => {
+    const zoomOut = document.createElement('div');
+    zoomOut.classList.add('ol-zoom-out');
+    document.body.appendChild(zoomOut);
+  });
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -25,7 +29,7 @@ describe('AppComponent', () => {
     fixture = TestBed.createComponent(AppComponent);
     component = fixture.componentInstance;
 
-    component.map = <any>map;
+    component.map = map as any;
   });
 
   it('should create the app', () => {
@@ -55,8 +59,3 @@ describe('AppComponent', () => {
   });
 });
 
-function createZoomOut() {
-  const zoomOut = document.createElement('div');
-  zoomOut.classList.add('ol-zoom-out');
-  document.body.appendChild(zoomOut);
-}
