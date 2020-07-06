@@ -1,5 +1,5 @@
 # Welcome to ol-zoom-level 👋
-![Version](https://img.shields.io/badge/version-1.0.7-blue.svg?cacheSeconds=2592000)
+![Version](https://img.shields.io/badge/version-1.0.8-blue.svg?cacheSeconds=2592000)
 [![Twitter: plexearth](https://img.shields.io/twitter/follow/plexearth.svg?style=social)](https://twitter.com/plexearth)
 
 > OpenLayers zoom level library. Adds a zoom level view on an OpenLayers map that displays the current zoom level.
