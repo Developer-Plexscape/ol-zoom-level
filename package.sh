@@ -13,4 +13,3 @@ cat dist/ol-zoom-level/{runtime.*,polyfills.*,main.*}.js > dist/publish/build.js
 # copy assets to the publish folder
 cp package-build.json dist/publish/package.json
 cp README.md dist/publish/README.md
-cp preview.png dist/publish/preview.png

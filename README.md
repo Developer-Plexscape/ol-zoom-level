@@ -4,7 +4,7 @@
 
 > OpenLayers zoom level library. Adds a zoom level view on an OpenLayers map that displays the current zoom level.
 
-![Preview](preview.png)
+<img src="https://github.com/Developer-Plexscape/ol-zoom-level/blob/master/preview.png?raw=true" alt="Preview" />
 
 ## Demo
 
