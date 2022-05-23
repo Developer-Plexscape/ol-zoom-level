@@ -1,14 +1,9 @@
 # Welcome to ol-zoom-level 👋
-![Version](https://img.shields.io/badge/version-1.0.9-blue.svg?cacheSeconds=2592000)
 [![Twitter: plexearth](https://img.shields.io/twitter/follow/plexearth.svg?style=social)](https://twitter.com/plexearth)
 
 > OpenLayers zoom level library. Adds a zoom level view on an OpenLayers map that displays the current zoom level.
 
 <img src="https://github.com/Developer-Plexscape/ol-zoom-level/blob/master/preview.png?raw=true" alt="Preview" />
-
-## Demo
-
-You can test a fully functional working live demo [here](https://plexstaticweb.z6.web.core.windows.net/ol-zoom-level).
 
 ## Install
 

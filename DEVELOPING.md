@@ -11,12 +11,6 @@ To get started locally, follow these instructions:
 
 Run `npm start` to start the application. You will then be able to access it at http://localhost:4200
 
-## Building
-
-To build the application, you will need a Linux environment. In case you are in a Windows 10 machine you can install [Ubuntu Bash](https://msdn.microsoft.com/en-us/commandline/wsl/install-win10) alternatively.
-
-If that is the case consider installing the Node using a [package manager](https://nodejs.org/en/download/package-manager/).
-
 ## Run tests
 
 ```sh
