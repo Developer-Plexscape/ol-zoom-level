@@ -6,8 +6,7 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule],
-  entryComponents: [AppComponent]
+  imports: [BrowserModule]
 })
 export class AppModule {
   constructor(private injector: Injector) {}
