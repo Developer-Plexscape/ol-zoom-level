@@ -1,6 +1,6 @@
 {
   "name": "ol-zoom-level",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Zoom level view for OpenLayers",
   "repository": {
     "type": "git",
