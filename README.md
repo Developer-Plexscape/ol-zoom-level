@@ -13,7 +13,7 @@ npm install ol-zoom-level
 
 ## Usage
 
-To use ol-zoom-level, first you need to load OpenLayers javascript library along with its corresponsing CSS.
+To use ol-zoom-level, first you need to load OpenLayers JavaScript library along with its corresponsing CSS.
 
 ```sh
 <script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
@@ -26,7 +26,7 @@ Then, load the ol-zoom-level library from `node_modules`
 <script src="./node_modules/ol-zoom-level/build.js"></script>
 ```
 
-Finally, in your existing OpenLayers application, add ol-zoom-level HTML element and pass the OpenLayers map object as a property.
+Finally, in your existing OpenLayers application, add `ol-zoom-level` HTML element and pass the OpenLayers `map` object as a property.
 
 ```sh
 const zoomLevel = document.createElement('ol-zoom-level');
