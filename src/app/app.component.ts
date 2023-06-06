@@ -22,7 +22,7 @@ import { ChangeDetectorRef, Component, Inject, Input, OnDestroy, OnInit } from '
   `]
 })
 export class AppComponent implements OnDestroy, OnInit {
-  @Input() map: ol.Map;
+  @Input() map: ol.Map | undefined;
   zoomLevel = '2';
 
   private currentZoom = 2;
@@ -30,22 +30,22 @@ export class AppComponent implements OnDestroy, OnInit {
   constructor(private ref: ChangeDetectorRef, @Inject(DOCUMENT) private document: Document) {}
 
   ngOnDestroy() {
-    this.map.un('moveend', this.moveEndComplete);
+    this.map?.un('moveend', this.moveEndComplete);
   }
 
   ngOnInit() {
     // we change the style of the zoom out button when component is initialized
     // because the button exists outside the component scope
-    const zoomOutEl: HTMLElement = this.document.querySelector('.ol-zoom-out');
-    zoomOutEl.style.marginTop = '30px';
+    const zoomOutEl: HTMLElement | null = this.document.querySelector('.ol-zoom-out');
+    zoomOutEl!.style.marginTop = '30px';
 
-    this.map.on('moveend', this.moveEndComplete);
+    this.map?.on('moveend', this.moveEndComplete);
   }
 
   private moveEndComplete = () => {
-    const zoom = this.map.getView().getZoom();
+    const zoom = this.map?.getView().getZoom();
 
-    if (this.currentZoom !== zoom) {
+    if (zoom && this.currentZoom !== zoom) {
       this.currentZoom = zoom;
       this.zoomLevel = zoom.toFixed(0);
       this.ref.detectChanges();

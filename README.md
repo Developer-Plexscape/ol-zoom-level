@@ -39,14 +39,6 @@ document.body.appendChild(zoomLevel);
 
 Please note that if you are creating the zoom level control synchronously with the creation of the map, you may need to introduce a timeout so that the map has enough time to instantiate.
 
-## Development
-
-To run the project in your development environment, check out the developing guide [here](https://github.com/Developer-Plexscape/ol-zoom-level/blob/master/DEVELOPING.md).
-
-## Known Limitations
-
-Please check browser compatibility for custom elements as described in Angular official documentation [here](https://angular.io/guide/elements#browser-support-for-custom-elements).
-
 ## Author
 
 👤 **Plexscape**
