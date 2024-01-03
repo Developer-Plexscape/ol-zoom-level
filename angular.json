@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ol-zoom-level:build:production"
+              "buildTarget": "ol-zoom-level:build:production"
             },
             "development": {
-              "browserTarget": "ol-zoom-level:build:development"
+              "buildTarget": "ol-zoom-level:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ol-zoom-level:build"
+            "buildTarget": "ol-zoom-level:build"
           }
         },
         "test": {

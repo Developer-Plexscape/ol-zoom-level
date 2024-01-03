@@ -1,30 +1,28 @@
-const { exec } = require("child_process");
-const fs = require("fs");
-const path = require("path");
+const { exec } = require('child_process');
+const { appendFileSync, copyFileSync, mkdirSync, readFileSync, readdirSync, rmSync } = require('fs');
+const { join } = require('path');
 
-const publishDir = path.join('dist', 'publish');
+const publishDir = join('dist', 'publish');
 
 exec('npm run build', () => {
   // create the publish directory
-  fs.rmSync(publishDir, { recursive: true, force: true });
-  fs.mkdirSync(publishDir);
+  rmSync(publishDir, {
+    recursive: true,
+    force: true
+  });
+  mkdirSync(publishDir);
 
-  // package the dist directory in a single bundle
+  // package the output directory in a single bundle
   packageBundle();
 
   // copy assets to the publish folder
-  fs.copyFileSync('package-build.json', path.join(publishDir, 'package.json'));
-  fs.copyFileSync('README.md', path.join(publishDir, 'README.md'));
+  copyFileSync('package-build.json', join(publishDir, 'package.json'));
+  copyFileSync('README.md', join(publishDir, 'README.md'));
 });
 
 function packageBundle() {
-  const outDir = path.join('dist', 'ol-zoom-level');
-  const runtime = fs.readdirSync(outDir).find(fn => fn.startsWith('runtime'));
-  const polyfills = fs.readdirSync(outDir).find(fn => fn.startsWith('polyfills'));
-  const main = fs.readdirSync(outDir).find(fn => fn.startsWith('main'));
-
-  const outFile = path.join(publishDir, 'build.js');
-  fs.appendFileSync(outFile, fs.readFileSync(path.join(outDir, runtime)));
-  fs.appendFileSync(outFile, fs.readFileSync(path.join(outDir, polyfills)));
-  fs.appendFileSync(outFile, fs.readFileSync(path.join(outDir, main)));
+  const outDir = join('dist', 'ol-zoom-level');
+  const outFiles = readdirSync(outDir).filter(file => file.match('main|polyfills|runtime'));
+  const bundle = join(publishDir, 'build.js');
+  outFiles.forEach(file => appendFileSync(bundle, readFileSync(join(outDir, file))));
 }
